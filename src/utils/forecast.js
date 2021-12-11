@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find coordinates.', undefined);
         } else {
             const res = body.current;
-            callback(undefined, `${res.weather_descriptions[0]} Day. It is currently ${res.temperature} degrees out. It feels like ${res.feelslike} degrees out`);
+            callback(undefined, `${res.weather_descriptions[0]}. It is currently ${res.temperature} degrees out. It feels like ${res.feelslike} degrees out. The humidity is ${res.humidity}%.`);
         }
     });
 }; 
